@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  BatMan
+//
+//  Created by nb616 on 2017/9/27.
+//  Copyright © 2017年 nb616. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "ClassHeader.h"
+#import "Macros.h"
+#import "StaticConstant.h"
+#endif /* PrefixHeader_pch */
