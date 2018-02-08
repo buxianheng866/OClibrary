@@ -36,6 +36,7 @@
 #import "NSDate+Utils.h"
 #import "NSData+gzip.h"
 #import "ObjcRuntime.h"
+#import "XCFileManager.h"
 
 //Vender
 #import <AFNetworking.h>
@@ -44,6 +45,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import <SVProgressHUD.h>
 #import <YYKit.h>
+#import "KissXML.h"
 
 //tools
 #import "AudioHeader.h"
