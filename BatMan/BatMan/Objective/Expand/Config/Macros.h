@@ -21,6 +21,8 @@
 
 #define StatusBarHeight isIPhoneX ? 44 : 20 //状态栏高度
 
+#define layoutScale  MScreenWidth/375.0
+
 
 
 /*******************Method(方法宏)************************/
@@ -45,6 +47,8 @@
 
 #define RGBAColor(r,g,b,a)   [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]  //色值
 
+#define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
 #define HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]  //16进制色值
 
 #define  Text_Size(text,size,font) [text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil]; //计算文字高度
@@ -59,7 +63,10 @@
 
 #define isIOS9                ([[[UIDevice currentDevice]systemVersion]floatValue] >=9.0) // 是否大于IOS9
 
+#define iOS_Version           [[[UIDevice currentDevice]systemVersion] floatValue] // iOS版本
+
 #define isPad                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)     // 是否iPad
+
 #define isIPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? [[UIScreen mainScreen] currentMode].size.height==2436 : NO)
 
 #define IS_NULL_CLASS(OBJECT) [OBJECT isKindOfClass:[NSNull class]]   // 是否空对象

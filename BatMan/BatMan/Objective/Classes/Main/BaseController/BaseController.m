@@ -25,7 +25,6 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUIApplicationWillChangeStatusBarFrameNotification:) name:UIApplicationWillChangeStatusBarFrameNotification object:nil];
-    [self deleteNavibarUnderline];
 }
 
 - (void)didReceiveMemoryWarning {

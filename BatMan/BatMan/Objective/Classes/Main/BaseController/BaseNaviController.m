@@ -19,14 +19,42 @@
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowOffset = CGSizeZero;
     [naviBar setTitleTextAttributes:@{NSForegroundColorAttributeName : RGBAColor(40, 40, 40, 1),NSFontAttributeName : Text_Font(17), NSShadowAttributeName : shadow}];
-    [naviBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:(UIBarMetricsDefault)];
-    [naviBar setShadowImage:[UIImage new]];
+ 
+    
+    
+//    隐藏返回按钮后面的文字
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+//                                                         forBarMetrics:UIBarMetricsDefault];
+//
+    
+
+//
+//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//
+//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+//
+//    UIImageView *img = [self findHairlineImageViewUnder:self.view];
+//    
+//    img.hidden = YES;
+//    
+//    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, gScreenWidth, 0.5)];
+//    line.backgroundColor = RGBA(0, 0, 0, 0.1);
+//    [self.navigationBar addSubview:line];
+    
+    //    1，依旧保留半透明效果：也就是说tabBar和navigationBar的translucnet还是默认的YES时：
+    //
+    //    方法1：你可以不从（0，0）开始布局，而是从（0，64）开始布局（同理，底部的tabBar也要留下位置）
+    //
+    //    方法2：你一定要从（0，0）开始布局，则修改viewController的一个属性： UIRectEdgeNone
+    //
+    
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.interactivePopGestureRecognizer.delegate = self;
-    [self.navigationBar setTranslucent:NO];
+    [self.navigationBar setTranslucent:NO]; //从 navbar下面 0.0计算
     self.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:16],NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationBar.barTintColor = [UIColor whiteColor];
     

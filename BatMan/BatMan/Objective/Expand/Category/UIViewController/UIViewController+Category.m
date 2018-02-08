@@ -9,15 +9,7 @@
 #import "UIViewController+Category.h"
 
 @implementation UIViewController (Category)
-- (void) setBackBarButtonTitle:(NSString *)title{
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:nil];
-}
 
-- (void) setLeftBarButtonTitle:(NSString *)title action:(SEL)action{
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:action];
-}
 - (void) setRightBarButtonTitle:(NSString *)title action:(SEL)action{
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:action];
     [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -57,56 +49,49 @@
 }
 
 
-- (void)deleteNavibarUnderline {
-   
-    if ([self.navigationController.navigationBar respondsToSelector:@selector( setBackgroundImage:forBarMetrics:)])
-    {
-        NSArray *list=self.navigationController.navigationBar.subviews;
-        for (id obj in list)
-        {
-            if ([UIDevice currentDevice].systemVersion.floatValue >= 10.0)
-            {//10.0的系统字段不一样
-                UIView *view =   (UIView*)obj;
-                for (id obj2 in view.subviews) {
-                    
-                    if ([obj2 isKindOfClass:[UIImageView class]]) {
-                        UIImageView *image =  (UIImageView*)obj2;
-                        image.hidden = YES;
-                    }
-                }
-            }else
-            {
-                if ([obj isKindOfClass:[UIImageView class]])
-                {
-                    
-                    UIImageView *imageView=(UIImageView *)obj;
-                    NSArray *list2=imageView.subviews;
-                    for (id obj2 in list2)
-                    {
-                        if ([obj2 isKindOfClass:[UIImageView class]])
-                        {
-                            UIImageView *imageView2=(UIImageView *)obj2;
-                            imageView2.hidden=YES;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-- (CGRect)visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar {
-   
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    frame.size.height -= 20;
-    if (hasNav) {
-        frame.size.height -= 44;
-    }
-    if (hasTabBar) {
-        frame.size.height -= 48;
-    }
+
+
+- (void)restoreRootViewController:(UIViewController *)rootViewController {
+    //    UIModalTransitionStyleCoverVertical 底部滑入
+    //    UIModalTransitionStyleFlipHorizontal 水平翻转进入
+    //    UIModalTransitionStyleCrossDissolve 交叉溶解
+    //    UIModalTransitionStylePartialCurl 翻页
+    //
     
-    return frame;
+    rootViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [UIView transitionWithView:kKeyWindow duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        BOOL oldState = [UIView areAnimationsEnabled];
+        [UIView setAnimationsEnabled:NO];
+        kKeyWindow.rootViewController = rootViewController;
+        [UIView setAnimationsEnabled:oldState];
+    } completion:nil];
 }
 
+- (void)authorizationPhoto {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if (status == PHAuthorizationStatusAuthorized) {
+           
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+               
+            });
+            
+        }
+    }];
+}
+
+- (void)authorizationCamera {
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        if (!granted) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+               
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+           
+            });
+        }
+    }];
+}
 
 @end

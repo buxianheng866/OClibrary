@@ -7,20 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
+#import <Photos/Photos.h>
 @interface UIViewController (Category)
 - (void) setBackBarButtonTitle:(NSString *)title;
-
-
 
 - (void)setLeftBarButtonTitle:(NSString *)title action:(SEL)action;
 - (void)setRightBarButtonTitle:(NSString *)title action:(SEL)action;
 - (void)setLeftBarButtonImage:(UIImage *)image highlightImage:(UIImage *)highlightImage action:(SEL)action;
 - (void)setRightBarButtonImage:(UIImage *)image highlightImage:(UIImage *)highlightImage action:(SEL)action;
 
-- (void)deleteNavibarUnderline;  //删除黑线
 
-- (CGRect)visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar;
+- (void)restoreRootViewController:(UIViewController *)rootViewController;
 
+/*!
+ @method
+ @abstract 授权相机
+ */
+- (void)authorizationCamera;
+/*!
+ @method
+ @abstract 授权相册
+ */
 
+- (void)authorizationPhoto;
 @end

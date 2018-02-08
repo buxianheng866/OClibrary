@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42BB370B67E71217CE5710F7 /* libPods-BatMan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53227C7D5B747340630A03D9 /* libPods-BatMan.a */; };
+		7D1431951FD64529007C8250 /* XCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1431931FD64528007C8250 /* XCFileManager.m */; };
 		7D1A8CD81F7B51C500C34AAC /* HttpRequest_Net.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A8CC21F7B51C400C34AAC /* HttpRequest_Net.m */; };
 		7D1A8CD91F7B51C500C34AAC /* NetWorkPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A8CC41F7B51C400C34AAC /* NetWorkPort.m */; };
 		7D1A8CDA1F7B51C500C34AAC /* FCUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A8CC71F7B51C400C34AAC /* FCUUID.m */; };
@@ -59,11 +59,15 @@
 		7D1AF3D61F7B49AA00AEE044 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1AF3B21F7B49A900AEE044 /* UIView+Constraints.m */; };
 		7D1AF3D71F7B49AA00AEE044 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1AF3B51F7B49A900AEE044 /* UIViewController+Category.m */; };
 		7D1AF3DE1F7B4D3300AEE044 /* StaticConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1AF3DD1F7B4D3300AEE044 /* StaticConstant.m */; };
+		7D65F6B4202BE2DA0034F2F8 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D65F6B3202BE2DA0034F2F8 /* DrawView.m */; };
+		7DE659AB1FDE75C400D47D66 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE659AA1FDE75C400D47D66 /* NSString+Category.m */; };
+		A4C84C3C3313E23B6FAB8E2C /* libPods-BatMan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF927C0155BF36DD55E041C /* libPods-BatMan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2481FC4D96C3C7AF3C4689F0 /* Pods-BatMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-BatMan/Pods-BatMan.release.xcconfig"; sourceTree = "<group>"; };
-		53227C7D5B747340630A03D9 /* libPods-BatMan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BatMan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1431931FD64528007C8250 /* XCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFileManager.m; sourceTree = "<group>"; };
+		7D1431941FD64529007C8250 /* XCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFileManager.h; sourceTree = "<group>"; };
 		7D1A8CC11F7B51C400C34AAC /* HttpRequest_Net.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest_Net.h; sourceTree = "<group>"; };
 		7D1A8CC21F7B51C400C34AAC /* HttpRequest_Net.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest_Net.m; sourceTree = "<group>"; };
 		7D1A8CC31F7B51C400C34AAC /* NetWorkPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkPort.h; sourceTree = "<group>"; };
@@ -252,6 +256,13 @@
 		7D1AF3DB1F7B4D0000AEE044 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		7D1AF3DC1F7B4D3300AEE044 /* StaticConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticConstant.h; sourceTree = "<group>"; };
 		7D1AF3DD1F7B4D3300AEE044 /* StaticConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticConstant.m; sourceTree = "<group>"; };
+		7D65F6B2202BE2DA0034F2F8 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		7D65F6B3202BE2DA0034F2F8 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		7D65F6CA202BE3780034F2F8 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		7DE659A91FDE75C400D47D66 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		7DE659AA1FDE75C400D47D66 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		7DF3FF3F201B10C500941A29 /* FounctionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FounctionMethod.h; sourceTree = "<group>"; };
+		BDF927C0155BF36DD55E041C /* libPods-BatMan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BatMan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6F7B11CC0C8BEE7842962C /* Pods-BatMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatMan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BatMan/Pods-BatMan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,10 +274,10 @@
 				7D1A8D6B1F7B707E00C34AAC /* librtmp.a in Frameworks */,
 				7D1A8D6C1F7B707E00C34AAC /* libspeex.a in Frameworks */,
 				7D1A8D6D1F7B707E00C34AAC /* libssl.a in Frameworks */,
-				42BB370B67E71217CE5710F7 /* libPods-BatMan.a in Frameworks */,
 				7D1A8CF71F7B530D00C34AAC /* libopencore-amrwb.a in Frameworks */,
 				7D1A8D6A1F7B707E00C34AAC /* libcrypto.a in Frameworks */,
 				7D1A8CF61F7B530D00C34AAC /* libopencore-amrnb.a in Frameworks */,
+				A4C84C3C3313E23B6FAB8E2C /* libPods-BatMan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +287,8 @@
 		157AF7FE3FF971CCE8EE6428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53227C7D5B747340630A03D9 /* libPods-BatMan.a */,
+				7D65F6CA202BE3780034F2F8 /* libxml2.tbd */,
+				BDF927C0155BF36DD55E041C /* libPods-BatMan.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -326,6 +338,8 @@
 			children = (
 				7D1A8CD61F7B51C400C34AAC /* FileManager.h */,
 				7D1A8CD71F7B51C400C34AAC /* FileManager.m */,
+				7D1431941FD64529007C8250 /* XCFileManager.h */,
+				7D1431931FD64528007C8250 /* XCFileManager.m */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -684,6 +698,8 @@
 		7D1AF38F1F7B49A900AEE044 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				7DE659A91FDE75C400D47D66 /* NSString+Category.h */,
+				7DE659AA1FDE75C400D47D66 /* NSString+Category.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -806,6 +822,7 @@
 				7D1AF3DB1F7B4D0000AEE044 /* Macros.h */,
 				7D1AF3DC1F7B4D3300AEE044 /* StaticConstant.h */,
 				7D1AF3DD1F7B4D3300AEE044 /* StaticConstant.m */,
+				7DF3FF3F201B10C500941A29 /* FounctionMethod.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -813,6 +830,7 @@
 		7D1AF3BD1F7B49A900AEE044 /* ControlTools */ = {
 			isa = PBXGroup;
 			children = (
+				7D65F6AE202BE2A30034F2F8 /* DrawBoard */,
 				7D1A8CFF1F7B707E00C34AAC /* Speek */,
 				7D1A8CCA1F7B51C400C34AAC /* AudioUtil */,
 				7D1A8CC51F7B51C400C34AAC /* FCUUID */,
@@ -859,6 +877,15 @@
 			children = (
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7D65F6AE202BE2A30034F2F8 /* DrawBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7D65F6B2202BE2DA0034F2F8 /* DrawView.h */,
+				7D65F6B3202BE2DA0034F2F8 /* DrawView.m */,
+			);
+			path = DrawBoard;
 			sourceTree = "<group>";
 		};
 		BEC292E6823D6A3422127427 /* Pods */ = {
@@ -946,9 +973,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BatMan/Pods-BatMan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/KissXML/KissXML.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KissXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1005,18 +1047,21 @@
 				7D1A8CDA1F7B51C500C34AAC /* FCUUID.m in Sources */,
 				7D1A8CD81F7B51C500C34AAC /* HttpRequest_Net.m in Sources */,
 				7D1AF3D01F7B49A900AEE044 /* UIImage+Category.m in Sources */,
+				7D65F6B4202BE2DA0034F2F8 /* DrawView.m in Sources */,
 				7D1AF3D71F7B49AA00AEE044 /* UIViewController+Category.m in Sources */,
 				7D1A8D681F7B707E00C34AAC /* AudioRecoder.m in Sources */,
 				7D1A8CDD1F7B51C500C34AAC /* AudioManager+Proximity.m in Sources */,
 				7D1A8D701F7B733700C34AAC /* GlobalManager+save.m in Sources */,
 				7D1AF3C81F7B49A900AEE044 /* UserInformation.m in Sources */,
 				7D1AF3D31F7B49A900AEE044 /* UINavigationController+Category.m in Sources */,
+				7D1431951FD64529007C8250 /* XCFileManager.m in Sources */,
 				7D1AF3D11F7B49A900AEE044 /* UIImageView+Category.m in Sources */,
 				7D1AF3D41F7B49A900AEE044 /* UIScrollView+Category.m in Sources */,
 				7D1AF3DE1F7B4D3300AEE044 /* StaticConstant.m in Sources */,
 				7D1A8CF51F7B530D00C34AAC /* EMVoiceConverter.mm in Sources */,
 				7D1A8CDF1F7B51C500C34AAC /* PlayerUtil.m in Sources */,
 				7D1AF3C41F7B49A900AEE044 /* BaseController.m in Sources */,
+				7DE659AB1FDE75C400D47D66 /* NSString+Category.m in Sources */,
 				7D1A8D691F7B707E00C34AAC /* RtmpClient.m in Sources */,
 				7D1AF2DF1F7B3FFB00AEE044 /* main.m in Sources */,
 				7D1AF2D11F7B3FFB00AEE044 /* AppDelegate.m in Sources */,
@@ -1177,8 +1222,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7V4WL43S4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BatMan/Objective/Expand/Config/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+				);
 				INFOPLIST_FILE = BatMan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1188,9 +1247,48 @@
 					"$(PROJECT_DIR)/BatMan/Objective/Lib/Vender/VoiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/BatMan/Objective/Expand/ControlTools/Speek/Extend/lib",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"YYKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cndotabestdota.BatMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1201,8 +1299,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7V4WL43S4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BatMan/Objective/Expand/Config/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+				);
 				INFOPLIST_FILE = BatMan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1212,9 +1324,48 @@
 					"$(PROJECT_DIR)/BatMan/Objective/Lib/Vender/VoiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/BatMan/Objective/Expand/ControlTools/Speek/Extend/lib",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"YYKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cndotabestdota.BatMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

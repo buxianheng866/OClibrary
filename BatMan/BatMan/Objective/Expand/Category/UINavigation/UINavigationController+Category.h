@@ -48,4 +48,6 @@
  *  @return pop之后的viewcontrolers
  */
 - (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated;
+// underline线
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view;
 @end

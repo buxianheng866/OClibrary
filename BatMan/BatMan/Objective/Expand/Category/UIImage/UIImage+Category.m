@@ -7,7 +7,6 @@
 //
 
 #import "UIImage+Category.h"
-
 @implementation UIImage (Category)
 
 + (UIImage *)imageWithColor:(UIColor *)color {
@@ -304,4 +303,52 @@
     
     return newImage;
 }
+// iOS 获取本地视频的缩略图
++ (UIImage *)getImage:(NSString *)videoURL
+{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:videoURL] options:nil];
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    gen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    NSError *error = nil;
+    CMTime actualTime;
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return thumb;
+    
+}
+
+/**
+ *mb:返回一个小于这个参数的值大小的图片
+ */
++(NSData *)getDataFromImage:(UIImage *)image LessThanMB:(CGFloat)mb {
+    NSData *imageData = nil;
+    //经测试发现，压缩系数最小为0.01
+    for (CGFloat compression = 1.0; compression >= 0.1 ; compression -= 0.01) {
+        imageData = UIImageJPEGRepresentation(image, compression);
+        if (imageData.length <= mb * 1024 * 1024) {
+            break;
+        }
+    }
+    return imageData;
+}
+
++(UIImage *)getNewImageFromImage:(UIImage *)image LessThanMB:(CGFloat)mb {
+    NSData *imageData = [UIImage getDataFromImage:image LessThanMB:mb];
+    UIImage *newImage = [UIImage imageWithData:imageData];
+    return newImage;
+}
+
+//UIImage等比例缩放
++(UIImage *)scaleImage:(UIImage *)image toScale:(CGFloat)scaleSize {
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height * scaleSize));
+    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
+    
+}
+
 @end

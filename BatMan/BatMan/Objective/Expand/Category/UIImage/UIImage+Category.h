@@ -132,4 +132,14 @@
         imageViewSize:(CGSize)size
              clipRect:(CGRect)rect;
 
+// iOS 获取本地视频的缩略图
++ (UIImage *)getImage:(NSString *)videoURL;
+
+/*
+*压缩原图获得小于某个M为单位大小的新图片
+*/
++(UIImage *)getNewImageFromImage:(UIImage *)image LessThanMB:(CGFloat)mb;
+
+//UIImage等比例缩放
++(UIImage *)scaleImage:(UIImage *)image toScale:(CGFloat)scaleSize;
 @end
